@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NNABUGO4 DIGITAL WAVE</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      background: #f4f4f4;
       color: #333;
     }
     header {
-      background: #ffcc00;
-      color: #000;
-      padding: 20px;
+      background: #0077cc;
+      color: white;
+      padding: 30px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
     }
     header p {
       font-style: italic;
-      margin-top: 5px;
+      margin-top: 10px;
     }
     section {
       padding: 20px;
     }
-    .quote-box {
-      background: #fff;
-      border-left: 5px solid #ffcc00;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       padding: 15px;
-      margin: 20px 0;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
     }
     footer {
       background: #222;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 15px;
-    }
-    .contact {
-      background: #fff;
-      padding: 15px;
-      border-radius: 5px;
-    }
-    .contact a {
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -61,27 +67,79 @@
 </header>
 
 <section>
-  <h2>Welcome to Our Solar Solutions</h2>
-  <p>We specialize in affordable and reliable solar installations tailored to your home or business needs. From powering LED bulbs to refrigerators and TVs, we help you harness the sun to light up your life.</p>
-
-  <div class="quote-box">
-    <h3>Sample Quotation:</h3>
-    <ul>
-      <li>6 × 180W Solar Panels</li>
-      <li>1 × Felicity 3kVA / 24V Hybrid Inverter</li>
-      <li>1 × 24V 250Ah Lithium Battery</li>
-      <li>1 × Digital Timer (for fridge)</li>
-      <li>Installation Hardware & Labour</li>
-      <li><strong>Total Estimate: ₦1,745,000</strong></li>
-    </ul>
-    <p><em>Note: This quotation is based on current market prices and may vary slightly.</em></p>
+  <h2>🔆 Assorted Solar Panels</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/panel-100w.jpg" alt="100W Solar Panel" />
+      <h3>100W Mono Panel</h3>
+      <p>Compact and efficient for small setups.</p>
+    </div>
+    <div class="card">
+      <img src="images/panel-330w.jpg" alt="330W Solar Panel" />
+      <h3>330W Bifacial Panel</h3>
+      <p>Dual-sided for maximum sunlight capture.</p>
+    </div>
+    <div class="card">
+      <img src="images/panel-550w.jpg" alt="550W Solar Panel" />
+      <h3>550W Mega Panel</h3>
+      <p>Ideal for large residential or commercial use.</p>
+    </div>
   </div>
+</section>
 
-  <div class="contact">
-    <h3>Contact Us</h3>
-    <p>📞 Call or WhatsApp: <a href="https://wa.me/2348069650691">+2349077449940</a></p>
-    <p>📧 Email: egbufor44@gmail.com</p>
+<section>
+  <h2>⚡ Inverters (Hybrid & Non-Hybrid)</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/hybrid-inverter.jpg" alt="Hybrid Inverter" />
+      <h3>Hybrid Inverter</h3>
+      <p>Smart switching between solar, battery, and grid.</p>
+    </div>
+    <div class="card">
+      <img src="images/non-hybrid-inverter.jpg" alt="Non-Hybrid Inverter" />
+      <h3>Standard Inverter</h3>
+      <p>Reliable DC to AC conversion for basic setups.</p>
+    </div>
   </div>
+</section>
+
+<section>
+  <h2>🔋 Charge Controllers</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/mppt-controller.jpg" alt="MPPT Controller" />
+      <h3>MPPT Controller</h3>
+      <p>Maximizes solar input efficiency.</p>
+    </div>
+    <div class="card">
+      <img src="images/pwm-controller.jpg" alt="PWM Controller" />
+      <h3>PWM Controller</h3>
+      <p>Simple and cost-effective regulation.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🔧 Solar Hardware</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/mounting-kit.jpg" alt="Mounting Kit" />
+      <h3>Mounting Kit</h3>
+      <p>Secure rooftop installation hardware.</p>
+    </div>
+    <div class="card">
+      <img src="images/cables.jpg" alt="Solar Cables" />
+      <h3>Solar Cables</h3>
+      <p>Durable wiring for safe energy flow.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🎥 Animated Videos: Solar-Powered Homes</h2>
+  <iframe src="https://www.youtube.com/embed/EG4KHwZut0o" title="Animated Explainer Video for Solar Power"></iframe>
+  <iframe src="https://www.youtube.com/embed/4Gfj4bdnpQ8" title="Solar Power Benefits | Animation video"></iframe>
+  <iframe src="https://www.youtube.com/embed/7aLrBwclh9w" title="Rooftop Solar Animated Video"></iframe>
 </section>
 
 <footer>
