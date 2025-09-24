@@ -4,29 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NNABUGO4 DIGITAL WAVE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #f4f4f4;
       color: #333;
+      scroll-behavior: smooth;
     }
     header {
       background: #0077cc;
       color: white;
-      padding: 30px;
-      text-align: center;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      animation: fadeIn 2s ease-in;
+    }
+    header img {
+      height: 60px;
     }
     header h1 {
+      font-size: 2.8em;
       margin: 0;
-      font-size: 2.5em;
     }
     header p {
       font-style: italic;
-      margin-top: 10px;
+      margin-top: 5px;
+      text-align: center;
+    }
+    nav {
+      background: #003366;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 10px;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
     }
     section {
-      padding: 20px;
+      padding: 30px;
+      animation: slideUp 1s ease-in;
     }
     .grid {
       display: grid;
@@ -39,6 +75,10 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       padding: 15px;
       text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     .card img {
       max-width: 100%;
@@ -55,96 +95,168 @@
       background: #222;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
     }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .whatsapp-float:hover {
+      background: #128C7E;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+#testimonials {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  padding: 30px 20px;
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-style: italic;
+  font-size: 1.1em;
+}
+.slide.active {
+  opacity: 1;
+}
   </style>
 </head>
 <body>
 
 <header>
-  <h1>NNABUGO4 DIGITAL WAVE</h1>
-  <p>Where ideas shine and dreams are powered.</p>
+  <img src="images/logo.png" alt="NNABUGO Logo">
+  <div>
+    <h1>NNABUGO4 DIGITAL WAVE</h1>
+    <p>Where ideas shine and dreams are powered.</p>
+  </div>
 </header>
 
-<section>
-  <h2>🔆 Assorted Solar Panels</h2>
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <h2>Welcome to NNABUGO4 DIGITAL WAVE</h2>
+  <p>We deliver reliable solar solutions tailored to your needs—from small setups to full home installations.</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <h3>Mission</h3>
+  <p>To empower homes and businesses with clean, sustainable solar energy solutions.</p>
+  <h3>Vision</h3>
+  <p>To be a leading force in digital energy innovation across Africa.</p>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <h3>Solar Panels</h3>
   <div class="grid">
-    <div class="card">
-      <img src="images/panel-100w.jpg" alt="100W Solar Panel" />
-      <h3>100W Mono Panel</h3>
-      <p>Compact and efficient for small setups.</p>
-    </div>
-    <div class="card">
-      <img src="images/panel-330w.jpg" alt="330W Solar Panel" />
-      <h3>330W Bifacial Panel</h3>
-      <p>Dual-sided for maximum sunlight capture.</p>
-    </div>
-    <div class="card">
-      <img src="images/panel-550w.jpg" alt="550W Solar Panel" />
-      <h3>550W Mega Panel</h3>
-      <p>Ideal for large residential or commercial use.</p>
-    </div>
+    <div class="card"><img src="images/panel-100w.jpg" alt="100W Panel"><p>100W Mono Panel</p></div>
+    <div class="card"><img src="images/panel-330w.jpg" alt="330W Panel"><p>330W Bifacial Panel</p></div>
+    <div class="card"><img src="images/panel-550w.jpg" alt="550W Panel"><p>550W Mega Panel</p></div>
+  </div>
+  <h3>Inverters</h3>
+  <div class="grid">
+    <div class="card"><img src="images/hybrid-inverter.jpg" alt="Hybrid Inverter"><p>Hybrid Inverter</p></div>
+    <div class="card"><img src="images/non-hybrid-inverter.jpg" alt="Standard Inverter"><p>Standard Inverter</p></div>
+  </div>
+  <h3>Hardware</h3>
+  <div class="grid">
+    <div class="card"><img src="images/mounting-kit.jpg" alt="Mounting Kit"><p>Mounting Kit</p></div>
+    <div class="card"><img src="images/cables.jpg" alt="Solar Cables"><p>Solar Cables</p></div>
   </div>
 </section>
 
-<section>
-  <h2>⚡ Inverters (Hybrid & Non-Hybrid)</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/hybrid-inverter.jpg" alt="Hybrid Inverter" />
-      <h3>Hybrid Inverter</h3>
-      <p>Smart switching between solar, battery, and grid.</p>
-    </div>
-    <div class="card">
-      <img src="images/non-hybrid-inverter.jpg" alt="Non-Hybrid Inverter" />
-      <h3>Standard Inverter</h3>
-      <p>Reliable DC to AC conversion for basic setups.</p>
-    </div>
+<section id="media">
+  <h2>Media</h2>
+  <iframe src="https://www.youtube.com/embed/EG4KHwZut0o" title="Solar Explainer"></iframe>
+  <iframe src="https://www.youtube.com/embed/4Gfj4bdnpQ8" title="Solar Benefits"></iframe>
+  <iframe src="https://www.youtube.com/embed/7aLrBwclh9w" title="Rooftop Solar"></iframe>
+</section>
+
+<section id="quote">
+  <h2>Request a Quotation</h2>
+  <form action="https://formspree.io/f/xanpykow" method="POST" style="max-width:600px;margin:auto;">
+    <label for="name">Name:</label><br>
+    <input type="text" name="name" required style="width:100%;padding:10px;"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" required style="width:100%;padding:10px;"><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" name="phone" required style="width:100%;padding:10px;"><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea name="message" rows="5" required style="width:100%;padding:10px;"></textarea><br><br>
+
+    <button type="submit" style="background:#0077cc;color:white;padding:10px 20px;border:none;border-radius:5px;">Submit Request</button>
+  </form>
+</section>
+
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="slider">
+    <div class="slide active">“NNABUGO Digital Wave transformed my home with solar. No more blackout worries!” – Fatima A.</div>
+    <div class="slide">“Professional service and great pricing. Highly recommend!” – Mr. Okeke</div>
+    <div class="slide">“Their hybrid inverter setup powers my fridge and TV all day!” – Blessing I.</div>
   </div>
 </section>
 
-<section>
-  <h2>🔋 Charge Controllers</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/mppt-controller.jpg" alt="MPPT Controller" />
-      <h3>MPPT Controller</h3>
-      <p>Maximizes solar input efficiency.</p>
-    </div>
-    <div class="card">
-      <img src="images/pwm-controller.jpg" alt="PWM Controller" />
-      <h3>PWM Controller</h3>
-      <p>Simple and cost-effective regulation.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>🔧 Solar Hardware</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/mounting-kit.jpg" alt="Mounting Kit" />
-      <h3>Mounting Kit</h3>
-      <p>Secure rooftop installation hardware.</p>
-    </div>
-    <div class="card">
-      <img src="images/cables.jpg" alt="Solar Cables" />
-      <h3>Solar Cables</h3>
-      <p>Durable wiring for safe energy flow.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>🎥 Animated Videos: Solar-Powered Homes</h2>
-  <iframe src="https://www.youtube.com/embed/EG4KHwZut0o" title="Animated Explainer Video for Solar Power"></iframe>
-  <iframe src="https://www.youtube.com/embed/4Gfj4bdnpQ8" title="Solar Power Benefits | Animation video"></iframe>
-  <iframe src="https://www.youtube.com/embed/7aLrBwclh9w" title="Rooftop Solar Animated Video"></iframe>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Address: Along St. Thomas Catholic Church Shen, Jos South, Plateau State, Nigeria</p>
+  <p>📞 Phone: +2348069650691</p>
+  <p>📧 Email: egbufor44@gmail.com</p>
 </section>
 
 <footer>
   &copy; 2025 NNABUGO4 DIGITAL WAVE. All rights reserved.
 </footer>
+
+<a href="https://wa.me/2348069650691" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 4000);
+</script>
 
 </body>
 </html>
